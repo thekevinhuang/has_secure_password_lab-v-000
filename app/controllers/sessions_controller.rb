@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
 
       if @user.try(:authenticate, params[:user][:password])
         session[:user_id] = @user.id
+        redirect_to home_path
       else
         redirect_to login_path
       end
