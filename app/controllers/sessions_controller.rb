@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
       @user = User.find_by(name: params[:name])
 
       binding.pry
-      
+
       #if @user.try(authenticate: params[:password])
       #  session[:user_id] = @user.id
       #else
